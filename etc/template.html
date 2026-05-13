@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>{{page_title}} | {{site_title}}</title>
+    <link rel="icon" href="{{favicon}}">
+    <link rel="stylesheet" href="{{url_root}}style.css">
+    <link rel="alternate" type="application/rss+xml" title="{{site_title}} RSS" href="/rss.xml">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a class="home-button" href="/">{{logo_html}}<span class="site-name">{{site_title}}</span></a>
+        <span class="top-nav">
+  {{top_nav}}
+        </span>
+    </nav>
+    <h1><a href="{{url_root}}">{{site_logo_html}}<span class="site-name">{{current_title}}</span></a></h1>
+</header>
+
+<nav id="side-bar">
+{{side_nav}}
+</nav>
+
+<article>
+{{article_content}}
+</article>
+
+<footer class="site-footer">
+    <div class="footer-left">{{footer_left}}</div>
+    <div class="footer-center">{{footer_center}}</div>
+    <div class="footer-right">{{footer_right}}</div>
+</footer>
+
+</body>
+</html>
