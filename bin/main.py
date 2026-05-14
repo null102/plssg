@@ -45,6 +45,9 @@ def main():
         print(f"[plssg] FATAL: missing {SRC_DIR}", file=sys.stderr)
         sys.exit(1)
 
+    # Wipe build/html so stale outputs from renamed/removed sources don't linger
+    # (e.g. 04_docs.md → 04_docs/ leaves an orphan docs.html with a stale sidebar).
+    shutil.rmtree(HTML_DIR, ignore_errors=True)
     os.makedirs(HTML_DIR, exist_ok=True)
 
     info  = layout.read_info_conf(INFO_CONF)
